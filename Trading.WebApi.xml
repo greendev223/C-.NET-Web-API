@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Trading.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Trading.WebApi.Controllers.ApplicationFilesController.Get">
+            <summary>
+            Returns all application files.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationFilesController.Get(System.Int64)">
+            <summary>
+            Return application file id.
+            </summary>
+            <param name="id">Represents application file identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationFilesController.Post(Trading.Dtos.ApplicationFileDto)">
+            <summary>
+            Create application file.
+            </summary>
+            <param name="applicationFileDto">Represents application file data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationFilesController.Put(System.Int64,Trading.Dtos.ApplicationFileDto)">
+            <summary>
+            Edit application file.
+            </summary>
+            <param name="id">Represents application file identifier.</param>
+            <param name="applicationFileDto">Represents application file data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationFilesController.Delete(System.Int64)">
+            <summary>
+            Delete application file.
+            </summary>
+            <param name="id">Represents application file identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.Get">
+            <summary>
+            Returns all applications.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.Get(System.Int64)">
+            <summary>
+            Returns application by id.
+            </summary>
+            <param name="id">Represents application indentifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.PostFileAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload file to the server.
+            </summary>
+            <param name="file">Represents a file sent with the HttpRequest.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.Post(Trading.Dtos.ApplicationDto)">
+            <summary>
+            Create application.
+            </summary>
+            <param name="applicationDto">Represents application data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.Put(System.Int64,Trading.Dtos.ApplicationDto)">
+            <summary>
+            Edit application.
+            </summary>
+            <param name="id">Represents application indentifier.</param>
+            <param name="applicationDto">Represents application data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.Delete(System.Int64)">
+            <summary>
+            Delete application.
+            </summary>
+            <param name="id">Represents application indentifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.ApplicationsController.GetByGroupId(System.Int64)">
+            <summary>
+            Returns all applications that belongs to specific group.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.AuthenticateController.Login(Trading.Dtos.LoginDto)">
+            <summary>
+            Authenticate user username and password credentials. Returns JWT token on success.
+            </summary>
+            <param name="loginDto">Represents authentication data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.AuthenticateController.Register(Trading.Dtos.RegisterDto,System.Boolean)">
+            <summary>
+            Register user.
+            </summary>
+            <param name="registerDto">Represents body with user creadentials.</param>
+            <param name="createGroup">Represents user creation type(with or without group). Default true.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.Get">
+            <summary>
+            Returns all groups.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.Get(System.Int64)">
+            <summary>
+            Returns group by id.
+            </summary>
+            <param name="id">Represnts group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.Post(Trading.Dtos.GroupDto)">
+            <summary>
+            Create group.
+            </summary>
+            <param name="groupDto">Represents group data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.Put(System.Int64,Trading.Dtos.GroupDto)">
+            <summary>
+            Edit group.
+            </summary>
+            <param name="id">Represents group identifier.</param>
+            <param name="groupDto">Represents group data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.Delete(System.Int64)">
+            <summary>
+            Delete group.
+            </summary>
+            <param name="id">Represents group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.AddUserToGroup(System.Int64,System.String)">
+            <summary>
+            Add specific user to specific group.
+            </summary>
+            <param name="groupId">Represents group identifier.</param>
+            <param name="userId">Represents user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.AddUserToGroupByEmail(System.Int64,System.String)">
+            <summary>
+            Add specific user to specific group.
+            </summary>
+            <param name="groupId">Represents group identifier.</param>
+            <param name="email">Represents email address of user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.RemoveUserFromGroup(System.Int64,System.String)">
+            <summary>
+            Remove specific user from specific group.
+            </summary>
+            <param name="groupId">Represents group identifier.</param>
+            <param name="userId">Represents user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.GetUserGroupsByUserId(System.String)">
+            <summary>
+            Returns the groups the user is a member of. Returns using user id.
+            </summary>
+            <param name="userId">Represents user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.GetUserGroupsByEmail(System.String)">
+            <summary>
+            Returns the groups the user is a member of. Returns using user email.
+            </summary>
+            <param name="email">Represents user`s email.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.GetUsersInGroup(System.Int64)">
+            <summary>
+            Returns users that are members of specific group.
+            </summary>
+            <param name="groupId">Represents group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.GroupsController.GetGroupIdByVirtualMachineIpAddress(System.String)">
+            <summary>
+            Returns groupId identifier that represents the group identifier the virtual machine is member of.
+            </summary>
+            <param name="ipAddress">Represents the ip address of virtual machine.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.SystemController.GetMyIp">
+            <summary>
+            Returns ip address of the http client.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.TerminalsController.Get">
+            <summary>
+            Returns all terminals.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.TerminalsController.Get(System.Int64)">
+            <summary>
+            Returns terminal by id.
+            </summary>
+            <param name="id">Represents terminal identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.TerminalsController.Post(Trading.Dtos.CreateTerminalDto)">
+            <summary>
+            Create terminal.
+            </summary>
+            <param name="terminalDto">Represents terminal data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.TerminalsController.Put(System.Int64,Trading.Dtos.UpdateTerminalDto)">
+            <summary>
+            Edit terminal.
+            </summary>
+            <param name="id">Represents terminal identifier.</param>
+            <param name="terminalDto">Represents terminal data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.TerminalsController.Delete(System.Int64)">
+            <summary>
+            Delete terminal.
+            </summary>
+            <param name="id">Represents terminal identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.TerminalsController.UpdateTerminalApplication(Trading.Dtos.UpdateTerminalApplication)">
+            <summary>
+            Update terminal application.
+            </summary>
+            <param name="updateTerminalApplication">Represents updateTerminalApplication data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.UsersController.Get">
+            <summary>
+            Returns all users.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.UsersController.GetByEmail(System.String)">
+            <summary>
+            Returns user by email.
+            </summary>
+            <param name="email">Represnts email address.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.UsersController.GetById(System.String)">
+            <summary>
+            Returns user by id.
+            </summary>
+            <param name="id">Represents user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.UsersController.Me">
+            <summary>
+            Returns system information for current authenticated user.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.Get">
+            <summary>
+            Returns all virtual machines.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.Get(System.Int64)">
+            <summary>
+            Returns virtual machine by id.
+            </summary>
+            <param name="id">Represents virtual machine identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.Post(Trading.Dtos.CreateVirtualMachineDto)">
+            <summary>
+            Create virtual machine.
+            </summary>
+            <param name="virtualMachineDto">Represents virtual machine data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.Put(System.Int64,Trading.Dtos.PutVirtualMachineDto)">
+            <summary>
+            Edit virtual machine.
+            </summary>
+            <param name="id">Represents virtual machine identifier.</param>
+            <param name="virtualMachineDto">Represents virtual machine data transfer object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.Delete(System.Int64)">
+            <summary>
+            Delete virtual machine.
+            </summary>
+            <param name="id">Represents virtual machine identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.GetByGroupId(System.Int64)">
+            <summary>
+            Returns all virtual machines the are members of current group.
+            </summary>
+            <param name="groupId">Represents group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.AddVirtualMachineToGroup(System.Int64,System.Int64)">
+            <summary>
+            Add virtual machine to group.
+            </summary>
+            <param name="virtualMachineId">Represents virtual machine identifier.</param>
+            <param name="groupId">Represents group identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Trading.WebApi.Controllers.VirtualMachinesController.RemoveVirtualMachineFromGroup(System.Int64,System.Int64)">
+            <summary>
+            Remove virtual machine from group.
+            </summary>
+            <param name="virtualMachineId">Represents virtual machine identifier.</param>
+            <param name="groupId">Represents group identifier.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
